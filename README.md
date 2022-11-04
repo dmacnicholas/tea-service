@@ -62,7 +62,7 @@ GEMS
 #### Download this Repo 
 To install Tea Subcription locally, in your terminal run: </br>
 * git clone git@github.com:dmacnicholas/tea-service.git 
-* cd tea_subscription 
+* cd tea-service 
 * bundle install
 
 #### API Endpoints 
