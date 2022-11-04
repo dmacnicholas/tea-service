@@ -30,7 +30,7 @@ TABLES AND ATTRIBUTES </br>
 ![Screen Shot 2022-11-04 at 9 34 44 AM](https://user-images.githubusercontent.com/103002775/200015689-beae69aa-2271-4778-bceb-e3be41d8dec9.png)
 
 
-To learn more about how to use Tea Subscription, read the "How to Use Tea Subscription" section below. 
+To learn more about how to use Tea Subscription, read the "How to Use Tea Subscription Service" section below. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
