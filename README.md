@@ -76,7 +76,7 @@ The customer's ID must be included in the params.</br>
 The second endpoint can be used for creating a new subscription. </br>
   Subscription params are :title, :price, :status, :frequency, :tea_id, :customer_id.</br>
 
-- post '/api/v1/subscriptions', params: <subscription_params>
+- post '/api/v1/subscriptions', params: { <subscription_params> }
 
 The last endpoint can be used to cancel a customer's subscription, or change any other attribute of the subscription except the id. A subscription ID must be included in the params. </br>
 
