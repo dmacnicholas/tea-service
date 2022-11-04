@@ -60,7 +60,7 @@ GEMS
 
 #### Download this Repo 
 To install Tea Subcription locally, in your terminal run: </br>
-* git clone git@github.com:ClayAsh/tea_subscription.git 
+* git clone git@github.com:dmacnicholas/tea_subscription.git 
 * cd tea_subscription 
 * bundle install
 
@@ -79,7 +79,7 @@ The second endpoint can be used for creating a new subscription. </br>
 
 The last endpoint can be used to cancel a customer's subscription, or change any other attribute of the subscription except the id. A subscription ID must be included in the params. </br>
 
-- patch '/api/v1/subscriptions/cancel', params: { id: <subscription_id>, status: "Canceled" } 
+- patch '/api/v1/subscriptions/cancel', params: { id: <subscription_id>, status: "Cancelled" } 
 
 #### Testing 
 To run the Tea Subscription testing suite, in your terminal run: 
