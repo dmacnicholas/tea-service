@@ -11,7 +11,7 @@
       </ul>
     </li>
     <li>
-      <a href="#how-to-use-tea-subscription">How to Use Tea Subscription</a>
+      <a href="#how-to-use-tea-subscription">How to Use Tea Subscription Service</a>
       <ul>
         <li><a href="#download-this-repo">Download this Repo</a></li>
         <li><a href="#api-endpoints">API Endpoints</a></li>
