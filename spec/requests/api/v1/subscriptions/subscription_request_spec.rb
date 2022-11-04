@@ -77,4 +77,42 @@ RSpec.describe "Subscription endpoints" do
    expect(attributes[:tea]).to include(:temperature)
    expect(attributes[:tea]).to include(:brew_time)
  end
+
+ it 'can cancel subscription' do
+    customer = create(:customer)
+    tea = create(:tea)
+    subscription = create(:subscription, customer_id: customer.id, tea_id: tea.id)
+
+    expect(subscription[:status]).to eq("Active")
+
+    patch '/api/v1/subscriptions', params: { id: subscription.id, status: "Cancelled" }
+
+    subscription = JSON.parse(response.body, symbolize_names: true)
+
+    expect(response).to be_successful
+    expect(response.status).to eq 200
+    expect(subscription).to be_a(Hash)
+    expect(subscription[:data]).to include(:id)
+    expect(subscription[:data]).to include(:type)
+    expect(subscription[:data]).to include(:attributes)
+
+    attributes = subscription[:data][:attributes]
+
+    expect(attributes).to include(:title)
+    expect(attributes[:title]).to be_a(String)
+    expect(attributes).to include(:price)
+    expect(attributes[:price]).to be_a(Float)
+    expect(attributes).to include(:status)
+    expect(attributes[:status]).to eq("Cancelled")
+    expect(attributes).to include(:frequency)
+    expect(attributes[:status]).to be_a(String)
+    expect(attributes[:customer]).to include(:first_name)
+    expect(attributes[:customer]).to include(:last_name)
+    expect(attributes[:customer]).to include(:email)
+    expect(attributes[:customer]).to include(:address)
+    expect(attributes[:tea]).to include(:title)
+    expect(attributes[:tea]).to include(:description)
+    expect(attributes[:tea]).to include(:temperature)
+    expect(attributes[:tea]).to include(:brew_time)
+  end
 end
