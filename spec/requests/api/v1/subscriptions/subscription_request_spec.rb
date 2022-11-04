@@ -78,7 +78,7 @@ RSpec.describe "Subscription endpoints" do
    expect(attributes[:tea]).to include(:brew_time)
  end
 
- it 'can cancel subscription' do
+ it 'can cancel a subscription' do
     customer = create(:customer)
     tea = create(:tea)
     subscription = create(:subscription, customer_id: customer.id, tea_id: tea.id)
